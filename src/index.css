@@ -3,5 +3,16 @@
    
     --container-container:1170px;
     --font-poping:"Poppins",sans-serif;
-    --color-secondary:#FAFAFA
+    --color-secondary:#FAFAFA;
+    --spacing-12px:12px;
+    --text-14px:14px;
+    --text-16px:16px;
+    --spacing-48px:48px;
+    --spacing-118px:118px;
+    --spacing-24px:24px;
+    --color-box:#F5F5F5;
+    --spacing-8px:8px;
+    --spacing-12px:12px;
+    --spacing-243px:243px;
+
 }
