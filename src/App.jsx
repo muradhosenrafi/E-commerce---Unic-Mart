@@ -4,21 +4,30 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import RootLayout from "./components/RootLayout";
+import SingUp from './pages/SingUp';
+import Home from './pages/Home';
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Error from "./pages/Error";
 
-import Home from "./pages/Home";
-// import ShopNow from "./pages/ShopNow"
+
+
+
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
 <>
-    <Route
-      path="/"
-      element={<Home/>}
-    />
-    {/* <Route
-      path="/shop"
-      element={<ShopNow/>}
-    /> */}
+<Route path="/" element={<RootLayout/>}>
+<Route path="/home" element={<Home/>}></Route>
+<Route path="/contact" element={<Contact/>}></Route>
+<Route path="/about" element={<About/>}></Route>
+<Route path="/singup" element={<SingUp/>}></Route>
+<Route path="/*" element={<Error/>}></Route>
+
+</Route>
+
 </>
   )
 );

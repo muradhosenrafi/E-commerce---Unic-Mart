@@ -13,21 +13,21 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 
 const NavBar = () => {
   return (
-   <nav className="pt-10 pb-4">
+   <nav className="pt-10 pb-4 border-line border">
     <Container>
         <Flex>
             <div className="w-3/12 ">
             <div className="w-118px h-24px">
-                <Link to="/Home"><Image src={logo} alt="logo"/></Link>
+                <Link to="/home"><Image src={logo} alt="logo"/></Link>
             </div>
             </div>
 
             <div className="w-5/12">
             <ul className="flex gap-x-48px">
-                <ListItem className="" text="Home"/>
-                <ListItem className="" text="Contact"/>
-                <ListItem className="" text="About"/>
-                <ListItem className="" text="Sign Up"/>
+                <Link to="/home"><ListItem className="" text="Home"/></Link>
+                <Link to="/contact"><ListItem className="" text="Contact"/></Link>
+                <Link to="/about"><ListItem className="" text="About"/></Link>
+                <Link to="/singup"><ListItem className="" text="Sign Up"/></Link>
             </ul>
             </div>
             <div className="w-4/12 pl-20">
@@ -41,7 +41,6 @@ const NavBar = () => {
          <MdOutlineShoppingCart className="text-lg" />
 
           </Flex>
-
             </div>
         </Flex>
     </Container>

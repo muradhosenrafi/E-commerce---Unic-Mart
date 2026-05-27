@@ -1,12 +1,10 @@
-import NavBar from "../layouts/NavBar"
-import Offer from "../layouts/Offer"
 
+import Banner from '../layouts/Banner'
 
 const Home = () => {
   return (
     <div>
-<Offer/>
-<NavBar/>
+      <Banner/>
     </div>
   )
 }

@@ -7,12 +7,36 @@
     --spacing-12px:12px;
     --text-14px:14px;
     --text-16px:16px;
+    --text-12px:12px;
+    --text-20px:20px;
+    --text-24px:24px;
     --spacing-48px:48px;
     --spacing-118px:118px;
+    --spacing-1px:1px;
     --spacing-24px:24px;
+    --spacing-390px:390px;
+    --spacing-124px:124px;
+    --spacing-80px:80px;
     --color-box:#F5F5F5;
     --spacing-8px:8px;
+    --spacing-14%:14%;
     --spacing-12px:12px;
+    --spacing-140px:140px;
     --spacing-243px:243px;
-
+    --spacing-217px:217px;
+    --spacing-12px:12px;
+    --spacing-16px:16px;
+    --spacing-175px:175px;
+    --color-copy:#ffffff66;
+    --color-card:#F5F5F5;
+    --spacing-270px:270px;
+    --spacing-250px:250px;
+    --radius-4px:4px;
+    --spacing-40px:40px;
+    --spacing-55px:55px;
+    --spacing-34px:34px;
+    --color-line:#0000001a;
+}
+.omne{
+    color: #0000001a;
 }
