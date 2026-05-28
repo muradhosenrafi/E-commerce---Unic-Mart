@@ -6,13 +6,19 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 
 
-const Card = ({productimage,rating,disprice,producttitle,price,stock,className}) => {
+const Card = ({type,productimage,rating,disprice,producttitle,price,stock,className}) => {
   return (
     <Container>
 <div className={`w-270px group ${className}`}>
  <Flex className="relative w-full h-250px overflow-hidden bg-card rounded-4px justify-center items-center">
    <Image src={productimage} alt="Card image png one"/>
-   <p className="absolute top-12px left-12px bg-view py-2 px-12px font-poping text-xs font-normal rounded-4px text-secondary">{rating}</p>
+   {
+  !type && (
+    <p className="absolute top-12px left-12px bg-view py-2 px-12px font-poping text-xs font-normal rounded-4px text-secondary">
+      {rating}
+    </p>
+  )
+}
    <ul className="absolute text-lg top-12px right-12px bg-white w-34px h-34px flex justify-center items-center rounded-full "><FaRegHeart /></ul>
    <ul className="absolute text-lg top-55px right-12px bg-white w-34px h-34px flex justify-center items-center rounded-full "><MdOutlineRemoveRedEye /></ul>
    <div className="absolute -bottom-40px group-hover:bottom-0 left-0 duration-300  rounded-b-4px cursor-pointer bg-black py-2 font-poping text-16px font-medium text-center w-full text-secondary"><p>Add To Cart</p></div>

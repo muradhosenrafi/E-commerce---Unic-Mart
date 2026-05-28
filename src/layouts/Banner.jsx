@@ -2,8 +2,16 @@
 import CategoryList from "../components/CategoryList";
 import Container from "../components/Container";
 import Flex from "../components/Flex";
-import Image from "../components/Image"
-import Bannerimage from "../assets/banner.jpg"
+import Image from "../components/Image";
+import Bannerimage from "../assets/banner.jpg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination, Autoplay } from "swiper/modules";
+
 
 const Banner = () => {
   return (
@@ -12,7 +20,7 @@ const Banner = () => {
 <section className="pt-48px pb-140px">
 <Container>
 <Flex>
-<div className='w-3/12 relative after:w-1px after:h-390px after:absolute after:-top-14% after:right-55px after:bg-line after:content-[""] '>
+<div className='w-3/12 relative after:w-1px after:h-390px after:absolute after:-top-14px after:right-55px after:bg-line after:content-[""] '>
 <Flex className="flex-col gap-y-4">
 <CategoryList className =""type="true" text="Woman’s Fashion"/>
 <CategoryList classNameicon="ml-20"type="true" text="Men’s Fashion"/>
@@ -28,7 +36,35 @@ const Banner = () => {
 
 </div>
 <div className="w-9/12">
-<Image src={Bannerimage} alt="Banner image"/>
+
+ <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              pagination={{
+                clickable: true,
+              }}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+            >
+              <SwiperSlide>
+                  <Image src={Bannerimage} alt="Banner image"/>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                  <Image src={Bannerimage} alt="Banner image"/>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                  <Image src={Bannerimage} alt="Banner image"/>
+              </SwiperSlide>
+              
+            </Swiper>
+
+
 </div>
 </Flex>
 </Container>
