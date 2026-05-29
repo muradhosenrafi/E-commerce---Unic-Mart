@@ -19,7 +19,7 @@ const Footer = () => {
         <Flex className="justify-between pb-[60px] ">
             <div className="">
                 <div className="w-118px h-24px">
-                <Link to="/Home"><Image src={Whitelogo} alt="logo"/></Link>
+                <Link to="/"><Image src={Whitelogo} alt="logo"/></Link>
             </div>
             <h2 className="text-secondary py-24px font-medium font-poping text-20px">Subscribe</h2>
             <p className="text-secondary  font-normal font-poping text-16px">Get 10% off your first order</p>

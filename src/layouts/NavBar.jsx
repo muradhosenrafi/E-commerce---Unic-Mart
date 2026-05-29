@@ -28,13 +28,13 @@ const NavBar = () => {
         <Flex>
             <div className="w-3/12 ">
             <div className="w-118px h-24px">
-                <Link to="/home"><Image src={logo} alt="logo"/></Link>
+                <Link to="/"><Image src={logo} alt="logo"/></Link>
             </div>
             </div>
 
             <div className="w-5/12">
             <ul className="flex gap-x-48px">
-                <Link to="/home"><ListItem className="" text="Home"/></Link>
+                <Link to="/"><ListItem className="" text="Home"/></Link>
                 <Link to="/contact"><ListItem className="" text="Contact"/></Link>
                 <Link to="/about"><ListItem className="" text="About"/></Link>
                 <Link to="/singup"><ListItem className="" text="Sign Up"/></Link>

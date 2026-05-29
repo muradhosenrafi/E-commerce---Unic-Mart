@@ -20,7 +20,7 @@ const Banner = () => {
 <section className="pt-48px pb-140px">
 <Container>
 <Flex>
-<div className='w-3/12 relative after:w-1px after:h-390px after:absolute after:-top-14px after:right-55px after:bg-line after:content-[""] '>
+<div className='w-3/12 relative after:w-1px after:h-390px after:absolute after:-top-49px after:right-55px after:bg-line after:content-[""] '>
 <Flex className="flex-col gap-y-4">
 <CategoryList className =""type="true" text="Woman’s Fashion"/>
 <CategoryList classNameicon="ml-20"type="true" text="Men’s Fashion"/>
