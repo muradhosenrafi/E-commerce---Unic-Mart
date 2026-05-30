@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Error from "./pages/Error";
+import Login from "./pages/Login";
 
 
 
@@ -24,6 +25,7 @@ const router = createBrowserRouter(
 <Route path="/contact" element={<Contact/>}></Route>
 <Route path="/about" element={<About/>}></Route>
 <Route path="/singup" element={<SingUp/>}></Route>
+<Route path="/login" element={<Login/>}></Route>
 <Route path="/*" element={<Error/>}></Route>
 
 </Route>

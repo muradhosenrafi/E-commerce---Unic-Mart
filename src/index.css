@@ -22,6 +22,8 @@
     --spacing-1px:1px;
     --spacing-24px:24px;
     --spacing-390px:390px;
+    --spacing-370px:370px;
+    --spacing-326px:326px;
     --spacing-124px:124px;
     --spacing-170px:170px;
     --spacing-80px:80px;
@@ -49,11 +51,14 @@
     --spacing-250px:250px;
     --radius-4px:4px;
     --spacing-40px:40px;
+    --spacing-24px:24px;
     --spacing-55px:55px;
     --spacing-34px:34px;
     --color-line:#0000001a;
     --color-view:#DB4444;
+    --color-text:#00000080;
 }
+
 
 
 .one{

@@ -81,7 +81,7 @@ const NavBar = () => {
 
        <div className="flex items-center gap-2">
       <TbLogout2 className="text-2xl"/>
-            <p className="font-poping text-xs font-normal">Logout</p>
+           <Link to="/singup"> <p className="font-poping text-xs font-normal">Logout</p></Link>
         </div>
 
         </ul>
