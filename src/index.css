@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* *{
+
+     border:.1rem solid red ;
+} */
 @theme{
    
     --container-container:1170px;
