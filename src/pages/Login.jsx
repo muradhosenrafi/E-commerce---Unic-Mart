@@ -7,11 +7,12 @@ import Button from "../components/Button";
 import Hedding from "../components/Hedding";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword,sendPasswordResetEmail } from "firebase/auth";
  import { ToastContainer, toast } from 'react-toastify';
-
+import Forget from "../layouts/Forget";
 
 const Login = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
 
@@ -45,9 +46,16 @@ navigate("/")
   });
 }
 
-let hendailForget=()=>{
-  console.log("clickd")
-}
+  const handleSendEmail = (email) => {
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        toast.info("Check your email for the password !");
+        setShowPopup(false);
+      })
+      .catch((error) => {
+       toast.error(error.message);
+      });
+  };
 
   return (
     <section className="pt-60px pb-140px">
@@ -103,11 +111,16 @@ let hendailForget=()=>{
                 </div>
                 </Link>
 
-                
-                  <p onClick={hendailForget} className="text-16px font-poping font-normal cursor-pointer text-view">
+                  <p onClick={()=>setShowPopup(true)} className="text-16px font-poping font-normal cursor-pointer text-view">
                     Forget Password?
                   </p>
-              
+      {showPopup && (
+        <Forget
+          closePopup={() => setShowPopup(false)}  // 🔥 THIS IS CANCEL FIX
+          onSend={handleSendEmail}
+        />
+      )}
+
               </Flex>
             </div>
           </div>

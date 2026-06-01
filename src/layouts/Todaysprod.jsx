@@ -10,6 +10,7 @@ import prodecrt5 from "../assets/leptop.png";
 import prodecrt6 from "../assets/grafixcaard.png";
 import Button from "../components/Button";
 
+
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 import { useEffect, useState } from "react";
@@ -157,7 +158,7 @@ const Todaysprod = () => {
               </div>
             </div>
 
-            {/* Button */}
+       
             <div className="flex items-center gap-3 shrink-0">
 
               <button className="custom-prev w-40px h-40px md:w-46px md:h-46px rounded-full cursor-pointer bg-card flex items-center justify-center hover:bg-view hover:text-white duration-300">
@@ -282,7 +283,7 @@ const Todaysprod = () => {
 
           </Swiper>
 
-          {/* Button */}
+    
           <div className="py-60px text-center">
 
             <Button

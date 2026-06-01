@@ -18,6 +18,7 @@ const Home = () => {
       <OurProducts/>
       <NewArrival/>
       <CustomarService/>
+
     </div>
   )
 }

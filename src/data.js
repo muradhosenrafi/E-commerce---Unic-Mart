@@ -1,0 +1,161 @@
+import catfood from "../src/assets/catfood.png";
+
+
+
+let data=[
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"catfood"
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"catfood"
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"catfood"
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+    },
+    {
+        id:"01",
+        name:"Breed Dry Dog Food",
+        regularprice:"$100",
+        saleprice:"$260",
+        badge:"",
+        image:"productOneimage",
+        stock:"(88)"
+    },
+]
+
+export default data

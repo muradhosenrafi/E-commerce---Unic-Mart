@@ -3,6 +3,7 @@ import SubHedding from "../components/SubHedding";
 import Hedding from "../components/Hedding";
 import Card from "../components/Card";
 import Button from "../components/Button"
+import data from "../data";
 
 import product1 from "../assets/catfood.png";
 import product2 from "../assets/camra.png";
@@ -30,6 +31,8 @@ import "swiper/css/grid";
 import { Link } from "react-router-dom";
 
 const OurProducts = () => {
+
+  console.log(data)
   return (
     <section className="pb-184px">
 
@@ -116,7 +119,8 @@ const OurProducts = () => {
            
           >
 
-            <SwiperSlide>
+       
+              <SwiperSlide>
               <Card
                 type={true}
                 productimage={product1}
@@ -127,8 +131,8 @@ const OurProducts = () => {
                 stock="(35)"
               />
             </SwiperSlide>
-
-            <SwiperSlide>
+     
+<SwiperSlide>
               <Card
                 type={true}
                 productimage={product2}
@@ -260,6 +264,8 @@ const OurProducts = () => {
               />
             </SwiperSlide>
 
+
+            
           </Swiper>
 
         </div>
