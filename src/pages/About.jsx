@@ -23,20 +23,24 @@ import icon3 from "../assets/icon3.png"
 
 
 import Pounder from '../components/Pounder';
+import { useSelector } from 'react-redux';
 
 
 
 
 const About = () => {
+  const ona = useSelector((state) => state.breadCrumb.previouseValue);
+
+
   return (
     <section className='pt-80px'>
       <Container>
         <div className="flex pb-80px gap-2">
-          <Link to="/">
+        
             <h1 className="font-poping font-normal text-xs text-text">
-              Home
+               <Link to={ona=="Home"? "/" :`/${ona}`}>{ona}</Link>
             </h1>
-          </Link>
+        
 
           <span className="font-poping font-normal text-xs text-black">
             / About

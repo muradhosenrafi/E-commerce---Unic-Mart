@@ -8,11 +8,13 @@ import { IoSearch } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { AiOutlineUser } from "react-icons/ai";
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { AiTwotoneShopping } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 import { IoStarOutline } from "react-icons/io5";
 import { TbLogout2 } from "react-icons/tb";
+import { useDispatch } from "react-redux"
+import { addbreadcrumb } from "../slices/breadCrumbSlice"
 
 
 
@@ -20,7 +22,29 @@ import { TbLogout2 } from "react-icons/tb";
 
 
 const NavBar = () => {
+  let dispatch=useDispatch()
+
     let [dorpdown,setDropdown]=useState(false)
+
+      useEffect(() => {
+    let timer;
+
+    if (dorpdown) {
+      timer = setTimeout(() => {
+        setDropdown(false);
+      }, 1000);
+    }
+
+    return () => clearTimeout(timer);
+  }, [dorpdown]);
+
+
+  let handleBredCrumb =(name)=>{
+    dispatch(addbreadcrumb(name))
+   
+    
+  }
+
 
   return (
    <nav className="pt-10 pb-4 border-line border">
@@ -34,10 +58,10 @@ const NavBar = () => {
 
             <div className="w-5/12">
             <ul className="flex gap-x-48px">
-                <Link to="/"><ListItem className="" text="Home"/></Link>
-                <Link to="/contact"><ListItem className="" text="Contact"/></Link>
-                <Link to="/about"><ListItem className="" text="About"/></Link>
-                <Link to="/singup"><ListItem className="" text="Sign Up"/></Link>
+                <Link onClick={()=>handleBredCrumb('Home')} to="/"><ListItem className="" text="Home"/></Link>
+                <Link onClick={()=>handleBredCrumb('Contact')} to="/contact"><ListItem className="" text="Contact"/></Link>
+                <Link onClick={()=>handleBredCrumb('Singup')} to="/singup"><ListItem className="" text="Sign Up"/></Link>
+                <Link onClick={()=>handleBredCrumb('About')} to="/about"><ListItem className="" text="About"/></Link>
             </ul>
             </div>
             <div className="w-4/12 relative pl-10">

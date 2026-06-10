@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import {useState } from "react";
+import {Link } from "react-router-dom";
 import Container from "../components/Container";
 import Flex from "../components/Flex";
 import Image from "../components/Image";
@@ -7,8 +7,14 @@ import logo1 from "../assets/icons-phone.png";
 import logo2 from "../assets/icons-mail.png";
 import Button from "../components/Button";
 import { ToastContainer, toast } from 'react-toastify';
+import { useSelector } from "react-redux";
 
 const Contact = () => {
+
+const ona = useSelector((state) => state.breadCrumb.previouseValue);
+
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -55,11 +61,11 @@ const Contact = () => {
     <section className="pb-140px pt-80px">
       <Container>
         <div className="flex pb-80px gap-2">
-          <Link to="/">
+          
             <h1 className="font-poping font-normal text-xs text-text">
-              Home
+            <Link to={ona=="Home"? "/" :`/${ona}`}>{ona}</Link>
             </h1>
-          </Link>
+          
 
           <span className="font-poping font-normal text-xs text-black">
             / Contact

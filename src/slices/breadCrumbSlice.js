@@ -3,12 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 export const breadCrumbSlice = createSlice({
   name: 'breads',
   initialState: {
-    value: 0,
+  currentValue:"",
+  previouseValue:"",
   },
   reducers: {
     addbreadcrumb: (state,action) => {
      
-console.log(state.value);
+
+state.previouseValue=state.currentValue
+state.currentValue=action.payload
 
 
     },
