@@ -14,7 +14,17 @@ import bustprod4 from "../assets/bookself.png"
 import Card from "../components/Card";
 
 
+
 const Product = () => {
+
+  let [show,setShow]=useState(9)
+
+
+let handleSelect =(e)=>{
+  setShow(e.target.value);
+  
+}
+
 const [currentPage, setCurrentPage] = useState(1);
 const products = [
   {
@@ -54,7 +64,7 @@ const products = [
     stock: "(65)",
   },
   {
-    id: 4,
+    id: 5,
     productimage: bustprod4,
     producttitle: "Small BookSelf",
     price: "$360",
@@ -63,7 +73,7 @@ const products = [
     stock: "(65)",
   },
   {
-    id: 4,
+    id: 6,
     productimage: bustprod4,
     producttitle: "Small BookSelf",
     price: "$360",
@@ -72,7 +82,7 @@ const products = [
     stock: "(65)",
   },
   {
-    id: 4,
+    id: 7,
     productimage: bustprod4,
     producttitle: "Small BookSelf",
     price: "$360",
@@ -81,7 +91,7 @@ const products = [
     stock: "(65)",
   },
   {
-    id: 4,
+    id: 8,
     productimage: bustprod4,
     producttitle: "Small BookSelf",
     price: "$360",
@@ -90,7 +100,7 @@ const products = [
     stock: "(65)",
   },
   {
-    id: 4,
+    id: 9,
     productimage: bustprod4,
     producttitle: "Small BookSelf",
     price: "$360",
@@ -99,7 +109,7 @@ const products = [
     stock: "(65)",
   },
   {
-    id: 4,
+    id: 10,
     productimage: bustprod4,
     producttitle: "Small BookSelf",
     price: "$360",
@@ -111,7 +121,7 @@ const products = [
   
 ];
 
-const itemsPerPage = 4;
+const itemsPerPage = show;
 
 const totalPages = Math.ceil(products.length / itemsPerPage);
 
@@ -248,14 +258,17 @@ const currentProducts = products.slice(
                 {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
 
               <div className="w-full w-8/12">
-              <div>
-              <select>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
+              <Flex className="justify-end">
+              <div className="mb-5 text-base font-poping py-2 px-5 border border-line font-normal">
+                <label htmlFor="">Show :</label>
+              <select onChange={handleSelect}>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
               </select>
               </div>
+              </Flex>
 
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {currentProducts.map((item) => (
