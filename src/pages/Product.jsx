@@ -3,17 +3,129 @@ import Container from "../components/Container"
 import Flex from "../components/Flex"
 import { useSelector } from "react-redux";
 import {Link } from "react-router-dom";
-import PaginatedItems  from "../components/PaginatedItems";
+import PaginatedItems from "../components/PaginatedItems";
+import { useState } from "react";
 
 
-// import bustprod1 from "../assets/raincort.png"
-// import bustprod2 from "../assets/bag.png"
-// import bustprod3 from "../assets/grafixcaard.png"
-// import bustprod4 from "../assets/bookself.png"
-// import Card from "../components/Card";
+import bustprod1 from "../assets/raincort.png"
+import bustprod2 from "../assets/bag.png"
+import bustprod3 from "../assets/grafixcaard.png"
+import bustprod4 from "../assets/bookself.png"
+import Card from "../components/Card";
+
 
 const Product = () => {
+const [currentPage, setCurrentPage] = useState(1);
+const products = [
+  {
+    id: 1,
+    productimage: bustprod1,
+    producttitle: "The north coat",
+    price: "$260",
+    disprice: "$360",
+    rating: "",
+    stock: "(65)",
+  },
+  {
+    id: 2,
+    productimage: bustprod2,
+    producttitle: "Gucci duffle bag",
+    price: "$960",
+    disprice: "$1160",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 3,
+    productimage: bustprod3,
+    producttitle: "RGB liquid CPU Cooler",
+    price: "$160",
+    disprice: "$170",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+  {
+    id: 4,
+    productimage: bustprod4,
+    producttitle: "Small BookSelf",
+    price: "$360",
+    disprice: "",
+    rating: "Best",
+    stock: "(65)",
+  },
+
+  
+];
+
+const itemsPerPage = 4;
+
+const totalPages = Math.ceil(products.length / itemsPerPage);
+
+const startIndex = (currentPage - 1) * itemsPerPage;
+
+const currentProducts = products.slice(
+  startIndex,
+  startIndex + itemsPerPage
+);
+
+
+    
     const ona = useSelector((state) => state.breadCrumb.previouseValue);
+    
   return (
     <section>
         <Container>
@@ -135,8 +247,39 @@ const Product = () => {
                
                 {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
 
-        <PaginatedItems itemsPerPage={4} />
+              <div className="w-full w-8/12">
+              <div>
+              <select>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+              </select>
+              </div>
 
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {currentProducts.map((item) => (
+    <Card
+      key={item.id}
+      productimage={item.productimage}
+      type={true}
+      rating={item.rating}
+      disprice={item.disprice}
+      producttitle={item.producttitle}
+      price={item.price}
+      stock={item.stock}
+
+
+    />
+  ))}
+</div>
+ <PaginatedItems
+  totalPages={totalPages}
+  currentPage={currentPage}
+  setCurrentPage={setCurrentPage}
+/>   
+
+</div>
              {/* </div> */}
                 </div>
             </Flex>
