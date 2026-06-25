@@ -12,6 +12,7 @@ import About from "./pages/About";
 import Error from "./pages/Error";
 import Login from "./pages/Login";
 import Product from "./pages/Product";
+import Cartoption from "./layouts/Cartoption";
 
 
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
 <Route path="/singup" element={<SingUp/>}></Route>
 <Route path="/login" element={<Login/>}></Route>
 <Route path="/shop" element={<Product/>}></Route>
+<Route path="/cartoption" element={<Cartoption/>}></Route>
 <Route path="/*" element={<Error/>}></Route>
 
 </Route>
